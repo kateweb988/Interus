@@ -1,0 +1,584 @@
+@media screen and (max-width: 1199px)
+   .contacts .header__pic
+      opacity: 1
+   .contacts-block__item
+      width: 49%
+      margin-bottom: 20px
+   .contacts-block__row
+      flex-wrap: wrap
+   .menu-btn 
+      width: 48px
+      height: 24px
+      position: absolute
+      right: 0px
+      top: 18px
+      z-index: 11
+      overflow: hidden
+   .menu-btn span 
+      width: 38px
+      height: 2px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: $blue
+      transition: all 0.5s
+   .menu-btn span:nth-of-type(2) 
+      top: calc(50% - 8.5px)
+      width: 38px
+      height: 2px
+   .menu-btn span:nth-of-type(3) 
+      top: calc(50% + 9.4px)
+      width: 38px
+      height: 2px
+   .menu.active
+      transform: translateX(0)
+   .menu-btn.active 
+      overflow: visible
+      position: fixed
+      right: 30px
+      top: 20px
+   .menu-btn.active span:nth-of-type(1) 
+      display: none
+   .menu-btn.active span:nth-of-type(2) 
+      top: 50%
+      width: 24px
+      transform: translate(-50%, 0%) rotate(45deg)
+      margin-left: 0
+   .menu-btn.active span:nth-of-type(3) 
+      width: 24px
+      top: 50%
+      transform: translate(-50%, 0%) rotate(-44deg)
+      margin-left: 0
+   .menu-btn, .menu
+      display: block
+   .nav__item, .nav ul, .nav__content, .header__fig, .info__fig
+      display: none
+   .nav
+      z-index: 20
+      position: relative
+      &__box 
+         position: relative
+   .menu 
+      position: fixed
+      top: 0
+      right: 0
+      width: 100%
+      height: 100vh
+      padding: 60px 40px 40px
+      background: #f5f5ff
+      transform: translateX(500%)
+      transition: transform 0.5s
+      z-index: 7
+      overflow: hidden
+      -webkit-box-shadow: -11px 0px 28px -12px rgba(0,0,0,0.75)
+      -moz-box-shadow: -11px 0px 28px -12px rgba(0,0,0,0.75)
+      box-shadow: -11px 0px 28px -12px rgba(0,0,0,0.75)
+      .nav__content
+         display: block
+      ul 
+         display: block
+         li 
+            margin-bottom: 20px
+            a 
+               font-size: 18px
+               color: #000
+      .nav__tel
+         margin-right: 0
+         display: block
+         margin-bottom: 20px
+         color: #000
+      .nav__btn
+         margin-left: 0
+         margin-top: 20px
+   .header__pic
+      opacity: 0.1
+      right: 0
+   .header__box
+      margin: 70px 0
+   .info__top
+      flex-direction: column
+      margin-bottom: 40px
+      align-items: center
+   .info .sub
+      position: relative
+   .info h2
+      margin-bottom: 20px
+      align-self: start
+      &::first-letter
+         margin-left: 0
+   .info__flex
+      flex-direction: column
+      align-items: center
+   .info__item:nth-child(2)
+      left: 0
+      margin-top: 20px
+   .info__name 
+      top: 0
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+   .info__name img
+      top: 0
+      margin-left: 0
+      margin-bottom: 3px
+   .info__text
+      margin-left: 15px
+   .info__photos
+      margin-left: 15px
+   .ser__box
+      flex-wrap: wrap 
+      justify-content: center
+   .ser__item
+      margin: 10px
+   .van__item h3
+      line-height: 110%
+      min-height: 50px
+   .van__item
+      height: auto
+   .van__text
+      width: 73%
+      br 
+         display: none
+   .how__box
+      flex-direction: column
+   .how__content
+      margin-top: 0
+      margin-bottom: 30px  
+   .how__info
+      max-width: 100%
+   .how
+      height: auto
+      padding: 40px 0
+   .how__pic 
+      position: absolute
+      left: initial
+      bottom: inherit
+      right: 0
+      top: -44px
+   .case
+      padding: 70px 0
+   .case__content
+      max-width: 64% 
+      br 
+         display: none
+   .rev__box
+      flex-direction: column
+      align-items: center
+   .rev__content 
+      padding-top: 0
+      padding-right: 0
+      margin-bottom: 30px
+   .rev .case__arrows
+      justify-content: center
+   .blog .swiper3 .swiper-slide
+      min-height: 436px
+   .team__item
+      flex-direction: column-reverse
+      align-items: center
+   .team__content
+      max-width: 100%
+      margin-top: 25px
+   .team__info
+      margin-bottom: 25px
+   .team__wrap:nth-child(2)
+      .team__item
+         left: 0
+         flex-direction: column
+   .header-blog .header__fig2
+      display: none
+   .blog-page
+      &__item 
+         width: 48.92%
+         &:nth-child(3n)
+            margin-right: 20px
+         &:nth-child(2n)
+            margin-right: 0
+   .bit__box
+      flex-direction: column-reverse
+   .bit__row
+      max-width: 100%
+   .bit__content a
+      margin: 40px auto 0
+   .bit__content img, .option__pic2
+      display: none
+   .option__box a
+      margin: 40px auto 0
+   .option__pic1
+      top: -174px
+   .bit2 .bit__content a
+      margin-top: 40px
+   .van2__top p
+      font-size: 20px
+   .van2__text
+      font-size: 13px
+   .header-service .header__pic
+      opacity: 0.3
+@media ( max-width: 991px )
+   .blog-page__item 
+      width: 48.55%
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   .info
+      padding: 40px 0
+   h2 
+      font-size: 40px !important
+      line-height: 120% !important
+   .sub
+      font-size: 11px
+      margin-bottom: 15px
+   .info__bottom
+      flex-direction: column
+      text-align: center
+   .info__name img
+      margin: 0 auto 5px
+   .info__photos
+      margin-left: 0
+      margin: 15px 0
+   .info__text
+      margin-left: 0
+   .info__btn
+      margin: 20px auto 0
+   .ser__item
+      width: 47%
+   .ser__pic 
+      bottom: -98px
+      right: -83px
+   .van__row
+      flex-wrap: wrap 
+      justify-content: center
+   .van__item
+      margin: 10px
+      width: 47%
+   .van__pic 
+      right: -35px
+      top: inherit
+      bottom: 0
+   .how__pic 
+      right: -20%
+      top: -50px
+   .case__logo
+      margin-bottom: 30px
+   .case .swiper1 .swiper-slide
+      padding: 30px 20px
+   .case__text
+      font-size: 18px
+      line-height: 140%
+   .case__info
+      flex-direction: column-reverse
+      align-items: flex-start
+   .case__btn
+      margin-right: 0
+      margin-top: 20px
+   .case .swiper1 .swiper-slide
+      height: auto
+      min-height: 375px
+   .blog
+      padding: 40px 0
+   .footer__flex
+      flex-direction: column-reverse
+   .footer__flex ul
+      margin-top: 10px
+   .bit2 .bit__fig2 
+      right: -12px
+      top: -270px
+   .van2__item
+      width: 49%
+@media screen and (max-width: 767px)
+   h1 
+      font-size: 40px
+      line-height: 130%
+   .header__pic
+      width: 130%
+      top: -48px
+   .header__content h1
+      margin-bottom: 25px
+   .header__text 
+      margin-bottom: 20px
+      font-size: 21px
+      line-height: 120%
+   .header__item
+      margin-right: 25px
+   h2 
+      font-size: 34px !important
+   .info__item
+      background: linear-gradient(90deg, rgba(212,235,255,1) 0%, rgba(218,242,255,1) 100%) !important
+      padding: 20px !important
+      height: auto
+   .ser__item, .van__item
+      width: 100%
+      margin: 0 auto 20px
+   .ser
+      padding: 40px 0
+   .van
+      padding: 40px 0 
+   .van__item h3
+      min-height: inherit
+   .van__pic, .how__pic, .case__arrows
+      display: none
+   .how__sub
+      max-width: 100%
+   .case__row
+      flex-direction: column
+   .case__content
+      max-width: 100% 
+      margin-bottom: 25px
+      align-self: flex-start
+   .case .swiper1
+      margin-top: 20px
+   .case .swiper1 .swiper-slide
+      min-height: auto
+   .case__info
+      margin-top: 40px
+   .case__area
+      top: 0
+      right: 0
+   .blog .swiper3 .swiper-slide
+      min-height: auto
+   .footer
+      padding: 40px 0 25px
+   .footer__flex 
+      text-align: center
+      align-items: center
+      justify-content: center
+   .footer__flex ul
+      flex-direction: column 
+      li 
+         margin-right: 0
+         margin-bottom: 10px
+   .footer__info
+      margin-bottom: 10px
+      a 
+         margin: 0 auto
+   .footer__row
+      margin-bottom: 25px
+      flex-direction: column
+   .footer__socials
+      margin-top: 25px
+   .footer__logo
+      width: 200px
+   .blog-page__item
+      width: 100%
+      margin-right: 0 !important
+   .header-blog .header__pic
+      top: -143px
+   .blog-page
+      padding: 40px 0
+      &__item 
+         &:nth-child(n+7)
+            display: none
+   .header__content_item h1
+      font-size: 30px
+      line-height: 134%
+   .contacts .header__pic 
+      right: -206px
+      top: -139px
+      width: 75%
+      opacity: 0.1
+   .contacts
+      overflow: hidden
+   .contacts .header__box
+      margin: 40px 0 80px
+   .contacts-block
+      padding: 40px 0
+   .contacts-block__item
+      width: 100%
+      height: auto
+   .bit__item
+      width: 100%
+      height: auto
+   .option__pic1
+      width: 120px
+   .bit2 .bit__fig2 
+      right: -12px
+      top: -257px
+      width: 91px
+   .van2__item
+      width: 100%
+      height: auto
+   .bit2 .bit__item
+      height: auto
+@media screen and (max-width: 576px)
+   button:active, button:focus 
+      outline: none
+   button::-moz-focus-inner 
+      border: 0
+   a:active, a:focus
+      outline: none
+   input, textarea
+      outline: none
+   input:active, textarea:active
+      outline: none
+   input:focusout
+      outline: none
+   .mm 
+      flex-direction: column 
+      align-items: center
+      justify-content: center
+      li 
+         margin-bottom: 40px !important
+         width: 100% !important
+         margin-top: 0 !important
+   .menu-btn.active
+      right: 10px
+   .menu
+      padding-top: 40px
+   h1 
+      font-size: 28px
+   .header__text
+      font-size: 18px
+   .header__row
+      margin-bottom: 10px
+      flex-direction: column
+   .header__item
+      margin-right: 0
+      margin-bottom: 20px
+   .header__box
+      margin: 50px 0
+   h2 
+      font-size: 25px !important
+   .info__block
+      width: 100%
+   .info__item
+      font-size: 18px
+   .ser__item
+      height: 393px
+   .ser__item a
+      margin-left: 0
+   .van__text, .how__sub, .case__content p
+      width: 100%
+      font-size: 17px
+      line-height: 136%
+   .van__item
+      padding: 30px 20px
+   .van__item h3
+      font-size: 21px
+      margin: 15px 0
+   .van__item
+      img 
+         width: 40px
+   .how__item
+      padding: 30px 20px
+   .how__item h3
+      font-size: 21px
+   .how__item p
+      font-size: 16px
+   .case
+      padding: 40px 0
+   .case__text
+      font-size: 16px
+   .sub 
+      margin-bottom: 10px
+   .header__pic
+      top: -14px
+   .case .swiper1, .blog .swiper3
+      width: 93%
+   .rev
+      padding: 40px 0
+   .rev__content
+      align-self: flex-start
+   .rev h2
+      br 
+         display: none
+   .mob 
+      display: block !important
+   .rev__pic
+      margin: 0 auto
+      display: block
+      position: relative
+      left: 20px
+   .rev .swiper2 .swiper-slide
+      padding: 30px 20px
+   .rev .swiper2 .swiper-slide blockquote
+      font-size: 15px
+   .rev__btn
+      margin-top: 25px
+   .blog .swiper3 .swiper-slide p
+      margin: 0 20px 25px 
+      font-size: 16px
+   .footer__bottom
+      flex-direction: column-reverse
+      text-align: center
+      a 
+         margin-bottom: 10px
+   .header-team .header__box
+      margin: 70px 0 100px
+   .header-team .header__pic
+      top: -2px
+   .team__wrap
+      padding: 40px 0
+   .team__pic
+      width: 100%
+      height: auto
+   .team__name
+      font-size: 40px
+   .team__text
+      font-size: 16px
+   .team__info
+      margin-bottom: 20px
+   .team__wrap:nth-child(3)
+      padding-bottom: 80px
+   .header-team .bread
+      margin-bottom: 60px
+   .header-blog .header__text
+      font-size: 18px
+   .header-blog .info__block
+      padding: 15px 20px
+   .header-blog .header__pic 
+      top: -105px
+      z-index: -1
+      right: -63px
+   .blog-page article h2
+      margin-bottom: 25px
+   .blog-page article p
+      font-size: 16px
+      margin-bottom: 15px
+   .blog-page article ul li
+      font-size: 16px
+   .blog-page article img
+      height: 300px
+      margin-bottom: 25px
+   .contacts .header__pic 
+      right: -117px
+      top: -84px
+      width: 270px
+      opacity: 0.1
+   .header-service .header__box 
+      margin: 58px 0 60px
+   .header-service .header__pic
+      opacity: 0.1
+      top: 0
+   .header-service .header__text
+      margin-bottom: 30px
+      display: flex
+      align-items: flex-start
+   .bit
+      padding: 40px 0
+   .bit__fig2 
+      right: -9px
+      top: -213px
+      width: 100px
+   .bit__sub
+      font-size: 18px
+   .bit__box
+      margin-top: 20px
+   .bit__top
+      img 
+         max-width: 35px
+   .bit__content a
+      margin-top: 10px
+   .option__pic1 
+      width: 81px
+      top: -134px
+   .option__box a
+      margin-top: 10px
+   .option
+      padding: 40px 0
+   .bit2 .bit__fig2 
+      right: -5px
+      top: -241px
+      width: 55px
+   .bit__fig1
+      display: none
