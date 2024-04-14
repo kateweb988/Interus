@@ -27,6 +27,7 @@
 		href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -736,6 +737,55 @@
 				</div>
 			</div>
 		</footer>
+		<div style="display:none;">
+			<div class="box-modal" id="popup-call">
+				<div class="popup-call__box">
+					<div class="popup__wrap call__wrap">
+						<img src="img/z2.svg" alt="" class="call__icon2">
+						<img src="img/z1.svg" alt="" class="call__icon3">
+						<p class="popup__name">
+							Оставьте свои даннные
+						</p>
+						<p class="popup__text">
+							И мы свяжемся с вами в ближайшее время!
+						</p>
+						<form action="success.php" class="js-form" id="popupResult" method="post">
+							<input type="text" placeholder="Имя" class="form__field" name="text" required="">
+							<input type="tel" placeholder="+7 (999) 999-99-99" name="tel" class="tel form__field" required="">
+							<button class="btn">
+								Отправить
+							</button>
+						</form>
+						<p class="call__sub">
+							Нажимая на кнопку «Заказать аудит» вы соглашаетесь <br> с <a href="#" target="_blank">политикой
+								конфиденциальности</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:none;">
+			<div class="box-modal" id="popup-thank">
+				<div class="popup-call__box">
+					<div class="popup__wrap">
+						<img src="img/z2.svg" alt="" class="call__icon2">
+						<img src="img/z1.svg" alt="" class="call__icon3">
+						<p class="popup__name">
+							Спасибо!
+						</p>
+						<p class="popup__text">
+							Ваша заявка принята, наши менеджеры свяжутся <br>
+							с вамив ближайшее время
+						</p>
+						<div class="box-modal__close articmodal-close">
+							<a href="#" class="popup__btn btn">
+								ОК
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 			ymaps.ready(init);
 
@@ -781,6 +831,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 		<script src="js/all.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+		<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+		<script type="text/javascript"
+			src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
 </body>
 
 </html>

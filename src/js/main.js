@@ -51,6 +51,139 @@ document.addEventListener("DOMContentLoaded", () => {
   // инициализация .tabs как табов
   new ItcTabs('.tabs');
 });
+document.addEventListener("DOMContentLoaded", () => {
+  $(document).ready(function () {
+    $('[data-submit]').on('click', function (e) {
+      e.preventDefault();
+      $(this).parents('form').submit();
+    })
+    $.validator.addMethod(
+      "regex",
+      function (value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+      },
+      "Please check your input."
+    );
+    function valEl(el) {
+
+      el.validate({
+        rules: {
+          tel: {
+            required: true,
+            regex: '^([\+]+)*[0-9\x20\x28\x29\-]{5,20}$'
+          },
+          name: {
+            required: true
+          }
+        },
+        messages: {
+          tel: {
+            required: 'Заполните поле',
+            regex: 'Телефон может содержать символы + - ()'
+          },
+          name: {
+            required: 'Заполните поле',
+          },
+          check: {
+            required: 'Поставьте галочку',
+          },
+          mail: {
+            required: 'Заполните поле',
+            email: 'Неверный формат E-mail'
+          }
+        },
+        submitHandler: function (form) {
+          $('#loader').fadeIn();
+          var $form = $(form);
+          var $formId = $(form).attr('id');
+          switch ($formId) {
+            case 'popupResult':
+              $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                data: $form.serialize(),
+              })
+                .always(function (response) {
+                  setTimeout(function () {
+                    $('#loader').fadeOut();
+                  }, 800);
+                  setTimeout(function () {
+                    $.arcticmodal('close');
+                    $('#popup-thank').arcticmodal({});
+                    $form.trigger('reset');
+                    //строки для остлеживания целей в Я.Метрике и Google Analytics
+                  }, 1100);
+
+                });
+              break;
+          }
+          return false;
+        }
+      })
+    }
+
+    $('.js-form').each(function () {
+      valEl($(this));
+    });
+    $('[data-scroll]').on('click', function () {
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'data-scroll')).offset().top
+      }, 2000);
+      event.preventDefault();
+    })
+  });
+
+});
+document.addEventListener('DOMContentLoaded', function () {
+  $('.articmodal-close').click(function (e) {
+    $.arcticmodal('close');
+
+  });
+  $('.nav__btn, .header__btn').click(function (e) {
+    e.preventDefault();
+    $('#popup-call').arcticmodal({
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  var accordeonButtons = document.getElementsByClassName("accordeon__button");
+
+  //пишем событие при клике на кнопки - вызов функции toggle
+  for (var i = 0; i < accordeonButtons.length; i++) {
+    var accordeonButton = accordeonButtons[i];
+
+    accordeonButton.addEventListener("click", toggleItems, false);
+  }
+
+  //пишем функцию
+  function toggleItems() {
+
+    // переменная кнопки(актульная) с классом
+    var itemClass = this.className;
+
+    // добавляем всем кнопкам класс close
+    for (var i = 0; i < accordeonButtons.length; i++) {
+      accordeonButtons[i].className = "accordeon__button closed";
+    }
+
+    // закрываем все открытые панели с текстом
+    var pannels = document.getElementsByClassName("accordeon__panel");
+    for (var z = 0; z < pannels.length; z++) {
+      pannels[z].style.maxHeight = 0;
+    }
+
+    // проверка. если кнопка имеет класс close при нажатии
+    // к актуальной(нажатой) кнопке добававляем активный класс
+    // а панели - которая находится рядом задаем высоту
+    if (itemClass == "accordeon__button closed") {
+      this.className = "accordeon__button active";
+      var panel = this.nextElementSibling;
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+  }
+});
 window.addEventListener("DOMContentLoaded", function () {
   [].forEach.call(document.querySelectorAll('.tel'), function (input) {
     var keyCode;
