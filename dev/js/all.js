@@ -311,6 +311,36 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  const swiper4 = new Swiper('.swiper4', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination3",
+    },
+    navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      767: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      }
+    }
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   let menuBtn = document.querySelector('.menu-btn');
